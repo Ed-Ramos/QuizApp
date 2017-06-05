@@ -100,7 +100,7 @@
             android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/q2a3_checkbox"
+            android:id="@+id/new_jersey_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
@@ -108,7 +108,7 @@
             android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/q2a4_checkbox"
+            android:id="@+id/georgia_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
@@ -157,7 +157,7 @@
             android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/q4a3_checkbox"
+            android:id="@+id/representative_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
@@ -165,7 +165,7 @@
             android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/q4a4_checkbox"
+            android:id="@+id/president_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
@@ -198,7 +198,9 @@
             android:layout_height="wrap_content"
             android:onClick="submitQuizResults"
             android:paddingTop="16dp"
-            android:text="Quiz Results" />
+            android:text="Quiz Results"
+            />
+
 
 
 

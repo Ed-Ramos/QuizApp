@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         String questionFourResult = "Incorrect";
         String questionThreeResult = "Incorrect";
         String questionOneResult = "Incorrect";
+        int Score = 0;
 
 
         EditText nameField = (EditText) findViewById(R.id.name_field);
@@ -39,14 +40,20 @@ public class MainActivity extends AppCompatActivity {
         Boolean questionOneCorrect = (questionOneButton.getText().equals("Hawaii"));
         if (questionOneCorrect) {
             questionOneResult = "Correct";
+            Score += 1;
         }
 
         // checking if Question 2 is correct
         CheckBox DelawareCheckBox = (CheckBox) findViewById(R.id.delaware_checkbox);
         CheckBox PennsylvaniaCheckBox = (CheckBox) findViewById(R.id.pennsylvania_checkbox);
-        boolean questionTwoCorrect = (DelawareCheckBox.isChecked()) & (PennsylvaniaCheckBox.isChecked());
+        CheckBox NewJeseyCheckBox = (CheckBox) findViewById(R.id.new_jersey_checkbox);
+        CheckBox GeorgiaCheckBox = (CheckBox) findViewById(R.id.georgia_checkbox);
+
+        boolean questionTwoCorrect = (DelawareCheckBox.isChecked()) && (PennsylvaniaCheckBox.isChecked())
+                                      && !(NewJeseyCheckBox.isChecked()) && !(GeorgiaCheckBox.isChecked());
         if (questionTwoCorrect) {
             questionTwoResult = "Correct";
+            Score += 1;
         }
 
 
@@ -55,27 +62,34 @@ public class MainActivity extends AppCompatActivity {
         String questionThreeAnswer = questionThreeField.getText().toString();
         if (questionThreeAnswer.equals("2")) {
             questionThreeResult = "Correct";
+            Score += 1;
         }
 
         // checking if Question 4 is correct
         CheckBox JudicialCheckBox = (CheckBox) findViewById(R.id.judicial_checkbox);
         CheckBox ExecutiveCheckBox = (CheckBox) findViewById(R.id.executive_checkbox);
-        boolean questionFourCorrect = (JudicialCheckBox.isChecked()) & (ExecutiveCheckBox.isChecked());
+        CheckBox RepresentativeCheckBox = (CheckBox) findViewById(R.id.representative_checkbox);
+        CheckBox PresidentCheckBox = (CheckBox) findViewById(R.id.president_checkbox);
+
+        boolean questionFourCorrect = (JudicialCheckBox.isChecked()) & (ExecutiveCheckBox.isChecked())
+                                       && !(RepresentativeCheckBox.isChecked()) && !(PresidentCheckBox.isChecked());
         if (questionFourCorrect) {
             questionFourResult = "Correct";
+            Score += 1;
         }
-        String resultMessage = createQuizSummary(name, questionOneResult, questionTwoResult, questionThreeResult, questionFourResult);
+        String resultMessage = createQuizSummary(name, questionOneResult, questionTwoResult, questionThreeResult, questionFourResult, Score);
         displayMessage(resultMessage);
 
     }
 
 
-    private String createQuizSummary(String name, String questionOneResult, String questionTwoResult, String questionThreeResult, String questionFourResult) {
+    private String createQuizSummary(String name, String questionOneResult, String questionTwoResult, String questionThreeResult, String questionFourResult, int Score) {
         String resultMessage = "Name: " + name;
         resultMessage += "\nQuestion 1: " + questionOneResult;
         resultMessage += "\nQuestion 2: " + questionTwoResult;
         resultMessage += "\nQuestion 3: " + questionThreeResult;
         resultMessage += "\nQuestion 4: " + questionFourResult;
+        resultMessage += "\nYour Score is: " + Score;
         return resultMessage;
 
 
