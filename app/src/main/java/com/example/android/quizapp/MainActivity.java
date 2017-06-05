@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
         //checking if Question 1 is correct
 
-        // get selected radio button from radioGroup
+        // get selected radio button from RadioGroup
         RadioGroup questionOneGroup = (RadioGroup) findViewById(R.id.question_one_group);
         int selectedId = questionOneGroup.getCheckedRadioButtonId();
 
-        // find the radio button by returned id
+        // find the radio button by returned id. If no button is selected, do nothing
         if (selectedId != -1) {
             RadioButton questionOneButton = (RadioButton) findViewById(selectedId);
             Boolean questionOneCorrect = (questionOneButton.getText().equals("Hawaii"));
@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
             questionTwoResult = "Correct";
             Score += 1;
         }
-
 
         //checking to see if Question 3 is correct
         EditText questionThreeField = (EditText) findViewById(R.id.question_three_field);
@@ -91,12 +90,11 @@ public class MainActivity extends AppCompatActivity {
         resultMessage += "\nQuestion 2: " + questionTwoResult;
         resultMessage += "\nQuestion 3: " + questionThreeResult;
         resultMessage += "\nQuestion 4: " + questionFourResult;
-        resultMessage += "\nYour Score is: " + Score;
+        resultMessage += "\nYour Score is: " + Score + " out of 4";
         return resultMessage;
 
 
     }
-
 
     /**
      * This method displays the given text on the screen.
