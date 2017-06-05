@@ -26,10 +26,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="American Government Quiz"
-            android:textAllCaps="true"
             android:textAlignment="center"
-            android:textSize="16sp"
-            />
+            android:textAllCaps="true"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -176,6 +175,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:paddingBottom="16dp"
             android:paddingTop="16dp"
             android:text="Quiz Results"
@@ -187,6 +187,7 @@
             android:id="@+id/quiz_results_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:paddingBottom="16dp"
             android:text="results"
             android:textAllCaps="true"
@@ -196,12 +197,10 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:onClick="submitQuizResults"
             android:paddingTop="16dp"
-            android:text="Quiz Results"
-            />
-
-
+            android:text="Quiz Results" />
 
 
     </LinearLayout>

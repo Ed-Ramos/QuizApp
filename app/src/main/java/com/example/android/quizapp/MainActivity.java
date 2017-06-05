@@ -36,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
         int selectedId = questionOneGroup.getCheckedRadioButtonId();
 
         // find the radio button by returned id
-        RadioButton questionOneButton = (RadioButton) findViewById(selectedId);
-        Boolean questionOneCorrect = (questionOneButton.getText().equals("Hawaii"));
-        if (questionOneCorrect) {
-            questionOneResult = "Correct";
-            Score += 1;
+        if (selectedId != -1) {
+            RadioButton questionOneButton = (RadioButton) findViewById(selectedId);
+            Boolean questionOneCorrect = (questionOneButton.getText().equals("Hawaii"));
+            if (questionOneCorrect) {
+                questionOneResult = "Correct";
+                Score += 1;
+            }
         }
 
         // checking if Question 2 is correct
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox GeorgiaCheckBox = (CheckBox) findViewById(R.id.georgia_checkbox);
 
         boolean questionTwoCorrect = (DelawareCheckBox.isChecked()) && (PennsylvaniaCheckBox.isChecked())
-                                      && !(NewJeseyCheckBox.isChecked()) && !(GeorgiaCheckBox.isChecked());
+                && !(NewJeseyCheckBox.isChecked()) && !(GeorgiaCheckBox.isChecked());
         if (questionTwoCorrect) {
             questionTwoResult = "Correct";
             Score += 1;
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox PresidentCheckBox = (CheckBox) findViewById(R.id.president_checkbox);
 
         boolean questionFourCorrect = (JudicialCheckBox.isChecked()) & (ExecutiveCheckBox.isChecked())
-                                       && !(RepresentativeCheckBox.isChecked()) && !(PresidentCheckBox.isChecked());
+                && !(RepresentativeCheckBox.isChecked()) && !(PresidentCheckBox.isChecked());
         if (questionFourCorrect) {
             questionFourResult = "Correct";
             Score += 1;
