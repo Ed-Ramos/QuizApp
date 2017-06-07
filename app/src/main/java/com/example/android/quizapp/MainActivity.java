@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         String questionThreeResult = "Incorrect";
         String questionOneResult = "Incorrect";
         int Score = 0;
+        String scoreMessage = "";
 
 
         EditText nameField = (EditText) findViewById(R.id.name_field);
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+
         // checking if Question 2 is correct
         CheckBox DelawareCheckBox = (CheckBox) findViewById(R.id.delaware_checkbox);
         CheckBox PennsylvaniaCheckBox = (CheckBox) findViewById(R.id.pennsylvania_checkbox);
@@ -61,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         //checking to see if Question 3 is correct
         EditText questionThreeField = (EditText) findViewById(R.id.question_three_field);
         String questionThreeAnswer = questionThreeField.getText().toString();
-        if (questionThreeAnswer.equals("2")) {
+        if (questionThreeAnswer.trim().equals("2")) {
             questionThreeResult = "Correct";
             Score += 1;
         }
@@ -78,21 +81,28 @@ public class MainActivity extends AppCompatActivity {
             questionFourResult = "Correct";
             Score += 1;
         }
-        String resultMessage = createQuizSummary(name, questionOneResult, questionTwoResult, questionThreeResult, questionFourResult, Score);
+
+        if (Score == 4) {
+            scoreMessage = "Great Job!";
+
+        } else {
+            scoreMessage = "try again for perfect score";
+        }
+        String resultMessage = createQuizSummary(name, questionOneResult, questionTwoResult, questionThreeResult, questionFourResult, scoreMessage);
         displayMessage(resultMessage);
+        Toast.makeText(this, "Your score is: " + Integer.toString(Score), Toast.LENGTH_LONG).show();
 
     }
 
 
-    private String createQuizSummary(String name, String questionOneResult, String questionTwoResult, String questionThreeResult, String questionFourResult, int Score) {
+    private String createQuizSummary(String name, String questionOneResult, String questionTwoResult, String questionThreeResult, String questionFourResult, String scoreMessage) {
         String resultMessage = "Name: " + name;
         resultMessage += "\nQuestion 1: " + questionOneResult;
         resultMessage += "\nQuestion 2: " + questionTwoResult;
         resultMessage += "\nQuestion 3: " + questionThreeResult;
         resultMessage += "\nQuestion 4: " + questionFourResult;
-        resultMessage += "\nYour Score is: " + Score + " out of 4";
+        resultMessage += "\n" + scoreMessage;
         return resultMessage;
-
 
     }
 
