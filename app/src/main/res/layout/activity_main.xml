@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
             android:paddingTop="16dp"
-            android:text="1. Which was the last state to join USA"
+            android:text="@string/question1"
             android:textAllCaps="true" />
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
             android:paddingTop="16dp"
-            android:text="2. Which were the first two states to join USA?"
+            android:text="@string/question2"
             android:textAllCaps="false" />
 
         <CheckBox
@@ -119,7 +119,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
             android:paddingTop="16dp"
-            android:text="3. Is America 1) a Democracy or 2) a Republic?"
+            android:text="@string/question3"
             android:textAllCaps="false" />
 
         <EditText
@@ -136,7 +136,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
             android:paddingTop="16dp"
-            android:text="4. Which two are branches of federal government?"
+            android:text="@string/question4"
             android:textAllCaps="false" />
 
         <CheckBox

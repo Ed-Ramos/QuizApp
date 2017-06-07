@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="question1">1. Which was the last state to join USA</string>
+    <string name="question2">2. Which were the first two states to join USA?</string>
+    <string name="question3">3. Is America 1) a Democracy or 2) a Republic?</string>
+    <string name="question4">4. Which two are branches of federal government?</string>
+
 </resources>
