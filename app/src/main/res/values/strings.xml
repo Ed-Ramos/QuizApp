@@ -4,5 +4,22 @@
     <string name="question2">2. Which were the first two states to join USA?</string>
     <string name="question3">3. Is America 1) a Democracy or 2) a Republic?</string>
     <string name="question4">4. Which two are branches of federal government?</string>
+    <string name="american_government_quiz">American Government Quiz</string>
+    <string name="hawaii">Hawaii</string>
+    <string name="alaska">Alaska</string>
+    <string name="arizona">Arizona</string>
+    <string name="new_mexico">New Mexico</string>
+    <string name="delaware">Delaware</string>
+    <string name="pennsylvania">Pennsylvania</string>
+    <string name="new_jersey">New Jersey</string>
+    <string name="georgia">Georgia</string>
+    <string name="judicial">Judicial</string>
+    <string name="executive">Executive</string>
+    <string name="representative">Representative</string>
+    <string name="president">President</string>
+    <string name="quiz_results">Quiz Results</string>
+    <string name="results">results</string>
+    <string name="enter_1_or_2">Enter 1 or 2</string>
+    <string name="name">Name</string>
 
 </resources>

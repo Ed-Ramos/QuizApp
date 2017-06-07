@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -19,16 +19,16 @@
             android:id="@+id/name_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:hint="@string/name"
             android:inputType="textCapWords" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="American Government Quiz"
+            android:text="@string/american_government_quiz"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,31 +46,23 @@
 
             <RadioButton
                 android:id="@+id/radio_a1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
-                android:text="Hawaii" />
+                android:text="@string/hawaii"
+                style="@style/radioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radio_a2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
-                android:text="Alaska" />
+                android:text="@string/alaska"
+                style="@style/radioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radio_a3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
-                android:text="Arizona" />
+                android:text="@string/arizona"
+                style="@style/radioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radio_a4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
-                android:text="New Mexico" />
+                android:text="@string/new_mexico"
+                style="@style/radioButtonStyle" />
         </RadioGroup>
 
 
@@ -84,35 +76,23 @@
 
         <CheckBox
             android:id="@+id/delaware_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:text="Delaware"
-            android:textSize="16sp" />
+            android:text="@string/delaware"
+            style="@style/checkBoxStyle" />
 
         <CheckBox
             android:id="@+id/pennsylvania_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:text="Pennsylvania"
-            android:textSize="16sp" />
+            android:text="@string/pennsylvania"
+            style="@style/checkBoxStyle" />
 
         <CheckBox
             android:id="@+id/new_jersey_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:text="New Jersey"
-            android:textSize="16sp" />
+            android:text="@string/new_jersey"
+            style="@style/checkBoxStyle" />
 
         <CheckBox
             android:id="@+id/georgia_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:text="Georgia"
-            android:textSize="16sp" />
+            android:text="@string/georgia"
+            style="@style/checkBoxStyle" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -127,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rect_text_edit"
-            android:hint="Enter 1 or 2"
+            android:hint="@string/enter_1_or_2"
             android:inputType="textCapWords"
             android:maxLines="1" />
 
@@ -141,35 +121,23 @@
 
         <CheckBox
             android:id="@+id/judicial_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:text="Judicial"
-            android:textSize="16sp" />
+            android:text="@string/judicial"
+            style="@style/checkBoxStyle" />
 
         <CheckBox
             android:id="@+id/executive_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:text="Executive"
-            android:textSize="16sp" />
+            android:text="@string/executive"
+            style="@style/checkBoxStyle" />
 
         <CheckBox
             android:id="@+id/representative_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:text="Representative"
-            android:textSize="16sp" />
+            android:text="@string/representative"
+            style="@style/checkBoxStyle" />
 
         <CheckBox
             android:id="@+id/president_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:text="President"
-            android:textSize="16sp" />
+            android:text="@string/president"
+            style="@style/checkBoxStyle" />
 
 
         <TextView
@@ -178,9 +146,9 @@
             android:layout_gravity="center_horizontal"
             android:paddingBottom="16dp"
             android:paddingTop="16dp"
-            android:text="Quiz Results"
+            android:text="@string/quiz_results"
             android:textAllCaps="true"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_size" />
 
 
         <TextView
@@ -189,9 +157,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:paddingBottom="16dp"
-            android:text="results"
+            android:text="@string/results"
             android:textAllCaps="true"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_size" />
 
 
         <Button
@@ -200,7 +168,7 @@
             android:layout_gravity="center_horizontal"
             android:onClick="submitQuizResults"
             android:paddingTop="16dp"
-            android:text="Quiz Results" />
+            android:text="@string/quiz_results" />
 
 
     </LinearLayout>

@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
     public void submitQuizResults(View view) {
         String questionTwoResult = "Incorrect";
         String questionFourResult = "Incorrect";
@@ -26,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         String questionOneResult = "Incorrect";
         int Score = 0;
         String scoreMessage = "";
-
 
         EditText nameField = (EditText) findViewById(R.id.name_field);
         String name = nameField.getText().toString();
@@ -46,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 Score += 1;
             }
         }
-
 
         // checking if Question 2 is correct
         CheckBox DelawareCheckBox = (CheckBox) findViewById(R.id.delaware_checkbox);
@@ -93,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Your score is: " + Integer.toString(Score), Toast.LENGTH_LONG).show();
 
     }
-
 
     private String createQuizSummary(String name, String questionOneResult, String questionTwoResult, String questionThreeResult, String questionFourResult, String scoreMessage) {
         String resultMessage = "Name: " + name;
